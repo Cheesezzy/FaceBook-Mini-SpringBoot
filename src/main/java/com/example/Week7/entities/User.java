@@ -38,5 +38,12 @@ public class User implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedAt;
 
-    //make dates auto generated
+    @PrePersist
+    public void setCreatedAt(){
+      createdAt = new Date();
+    }
+    @PreUpdate
+    public void setUpdatedAt(){
+        updatedAt= new Date();
+    }
 }
