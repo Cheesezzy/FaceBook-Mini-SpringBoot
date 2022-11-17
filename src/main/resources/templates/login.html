@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link th:include="header.html">
+    <link th:href="@{/css/loginpage.css}" rel="stylesheet">
+</head>
+    <body>
+        <div class="container">
+            <div class="information">
+                <h1>Facebook</h1>
+                <h4>We help you connect to your loved ones across continents.</h4>
+            </div>
+            <div class="loginRight">
+                <h3 class="containerHeading">Login</h3>
+                <p id="error" th:text="${error}"></p>
+                <form th:action="@{/login}" method="POST">
+                    <label for="email">
+                        <input type="email" name="email" id="email" placeholder="Email Address" th:value="${email}">
+                    </label>
+                    <label for="password">
+                        <input type="password" name="password" id="password" placeholder="Password" th:value="${password}">
+                    </label>
+                    <button type="submit" class="submitBtn"> LOGIN </button>
+                </form>
+                <div>
+                    <p id="signup"> <a href="/register"> No account yet? <span>sign up </span></a></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

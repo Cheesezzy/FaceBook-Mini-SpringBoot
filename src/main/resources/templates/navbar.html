@@ -1,0 +1,25 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+    <link th:href="@{https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css}" rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,200;1,300&display=swap');
+    </style>
+    <link th:href="@{./css/posts.css}" rel="stylesheet">
+    <head>
+
+    <nav class="navbar">
+        <div class="left">
+            <h1 class="title"><a href="/homepage">Facebook</a></h1>
+        </div>
+        <div class="right">
+            <ul>
+                <li> <a href="/home">Home</a></li>
+                <li> <a href="/myposts">My Posts</a></li>
+                <li> <a href="/login">Logout</a></li>
+                <li> <a href="#"><i class='bx bx-message-square-add'></i></a></li>
+            </ul>
+            <p th:if="${session.containsKey('user')}" th:text="${session.user.getFirstName() +' '+ session.user.getLastName()}"></p>
+        </div>
+    </nav>
+    </head>
+</html>

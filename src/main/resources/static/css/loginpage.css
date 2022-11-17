@@ -1,0 +1,151 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:  Monaco, "Source Sans Pro", Nunito, Cochin sans-serif;
+}
+
+body {
+  background-color: rgb(83, 119, 227);
+  /*background: #222222;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body {
+  text-align: center;
+  color: rgb(210, 208, 208);
+}
+
+body h1 {
+  /* color: rgb(150, 210, 251); */
+  color: whitesmoke;
+  font-size: 50px;
+  font-family: "Source Sans Pro";
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.container .loginRight {
+  max-width: 50vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 5px -4px 25px -11px rgba(25,25,25,0.69);
+  -webkit-box-shadow: 5px -4px 25px -11px rgba(25,25,25,0.69);
+  -moz-box-shadow: 5px -4px 25px -11px rgba(25,25,25,0.69);  
+  padding: 10px 30px;
+}
+
+.loginRight {
+  width: 45vw;
+}
+
+.containerHeading {
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: cornflowerblue;
+}
+
+.containerHeading p {
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form label input {
+  padding: 10px;
+  width: 30vw;
+  border: none;
+  outline: none;
+  border-bottom: 2px #7d7dd4 solid;
+  color: rgb(157, 153, 153);
+  background: none;
+}
+
+.submitBtn {
+  margin-top: 20px;
+  padding: 10px;
+  background: transparent;
+  border-radius: 8px;
+  border: 1px solid #7d7dd4;
+  transition: 0.3s ease-in;
+  color: cornflowerblue;
+  font-size: 18px;
+}
+
+.submitBtn:hover {
+  background-color: #7d7dd4;
+  color: white;
+  border: white;
+}
+
+.information {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+
+#error {
+  color: red;
+  font-size: 12px;
+}
+
+#signup {
+  color: rgb(250, 145, 106);
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+/* REGISTER */
+.names-div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.names-div input {
+  width: 100%;
+}
+
+#genderp {
+  text-align: left;
+  color: rgb(157, 153, 153);
+}
+.genderSelection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  color: rgb(157, 153, 153);
+}
+.genderSelection .div {
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+  border: 1px #7d7dd4 solid;
+  padding: 8px 12px;
+  border-radius: 8px;
+}

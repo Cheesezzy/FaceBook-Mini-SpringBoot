@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+      <div id="posts-container" th:each="post : ${posts}">
+      <section class="details">
+          <div class="left">
+            <h3 th:text="${post.getUser().getFirstName() +' '+ post.getUser().getLastName()}"></h3>
+            <p th:text="${post.getTimestamp()}"> </p>
+          </div>
+
+          <div class="actionButtons">
+              <form th:action="@{/allPosts/edit}" th:method="POST">
+                <div th:if="${session.containsKey('user') && post.getUser().getId().equals(session.user.getId())}">
+                    <div th:if="${session.containsKey('user') && post.getUser().getId().equals(session.user.getId())}">
+                        <button class="icon" type="submit">edit<i class='bx bxs-edit-alt'></i></button>
+                    </div>
+                </div>
+            </form>
+
+            <form th:action="@{/allPosts/delete}" th:method="DELETE">
+                <input type="hidden" name="postId" th:value="${post.getPostId()}" />
+                <input type="hidden" name="userId" th:value="${session.user.getId()}" />
+                <input type="hidden" name="postBody" th:value="${post.getPost()}" />
+                <div th:if="${session.containsKey('user') && post.getUser().getId().equals(session.user.getId())}">
+                    <button class="icon" type="submit">delete<i class='bx bx-trash-alt'></i></button>
+                </div>
+            </form>
+
+            <form th:action="@{/like}" th:method="POST">
+                <input type="hidden" name="postId" th:value="${post.getPostId()}" />
+                <input type="hidden" name="userId" th:value="${session.user.getId()}" />
+                <button class="icon" type="submit">
+                    <i class='bx bxs-like'>like</i>
+                </button>
+            </form>
+          </div>
+
+        </section>
+        <div class="bottom">
+            <div th:if="${session.user.getId().equals(post.getUser().getId())}">
+                <div th:if="${session.showInputField == true}">
+                    <form th:action="@{/allPosts/update}" th:method="PUT">
+                        <input id="postBody" type="text" name="postBody" th:value="${post.getPost()}" />
+                        <input type="hidden" name="postId" th:value="${post.getPostId()}" />
+                        <input type="hidden" name="userId" th:value="${session.user.getId()}" />
+                    </form>
+                </div>
+                <!-- ELSE -->
+            </div>
+            <div th:if="${session.showInputField == false}">
+                <p th:text="${post.getPost()}"> </p><br><br><hr>
+            </div>
+
+            <link th:insert="./homeview/comment.html" th:attr="value=${post}">
+        </div>
+      </div>
+</html>

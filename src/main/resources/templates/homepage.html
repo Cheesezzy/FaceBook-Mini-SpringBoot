@@ -1,0 +1,15 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <link th:include="./navbar.html">
+    <body>
+        <section class="postNew">
+            <link th:include="./homeview/addpost.html">
+        </section>
+        <div class="container">
+            <header style="display: flex; justify-content: space-between;"></header>
+            <link th:insert="./homeview/posts.html" th:attr="value=${posts}">
+        </div>
+    </body>
+</html>
+

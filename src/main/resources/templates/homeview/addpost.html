@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <body>
+    <form th:action="@{/allPosts/addNewPost}" method="POST">
+            <label for="postBody"> Add New Post </label>
+            <input th:if="${session.containsKey('user')} "type="hidden" name="userId" th:value="${session.user.getId()}" />
+            <textarea type="text" name="postBody" id="postBody" cols="50"
+                      rows="10" placeholder="Add new post" th:value="${postBody}">
+            </textarea>
+            <button type="submit">Share<i class='bx bx-share' ></i></button>
+        </form>
+    </body>
+</html>

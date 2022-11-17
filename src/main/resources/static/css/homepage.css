@@ -1,0 +1,155 @@
+
+
+
+
+/*COMMENT SECTION */
+.bottom {
+    width: 100%;
+    padding: 20px; 
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    /*box-shadow: 5px -4px 25px -11px rgba(25,25,25,0.69);*/
+    border: 1px solid lightslategray;
+    margin-bottom: 20px;
+}
+
+.details, .commentSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*background: rgb(78, 136, 244);*/
+    width: 100%;
+    padding: 10px;
+    /*color: white;*/
+    border-radius: 8px 8px 0 0;
+    /*border: 1px solid lightslategray;*/
+}
+
+.details h3 {
+    flex: 2;
+}
+
+.details p {
+    font-size: 12px;
+    color: rgb(234, 232, 232);
+}
+
+.actionButtons {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    padding-right: 10px;
+    margin-top: 20px;
+}
+
+.actionButtons form {
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+.actionButtons form button {
+    background: transparent;
+    border: none;
+    color: white;
+    gap: 10px;
+    border-radius: 4px;
+}
+
+.actionButtons p span {
+    color: white;
+}
+
+.showBg {
+    position: absolute;
+    font-size: 10px;
+    padding: 2px 5px;
+    top: -8px;
+    left: 8px;
+    background-color: rgb(207, 6, 6);
+    border-radius: 100%;
+}
+
+.icon {
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    background: none;
+    border: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.icon:hover {
+    color: red;
+}
+
+.comments {
+    padding: 10px;
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.comments label {
+    position: relative;
+}
+
+ input {
+    width: 55vw;
+    height: 100%;
+    padding: 10px;
+}
+
+ .comments label input {
+     padding-right: 50px;
+ }
+
+.comments button {
+    position: absolute;
+    height: 40px;
+    right: 0%;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+.commentSection {
+    background: rgb(161, 182, 202);
+}
+
+.comment-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: black;
+}
+
+.comment-info h3 {
+    font-size: 16px;
+    color: rgb(74, 75, 75);
+}
+
+.comment-info p {
+    font-size: 12px;
+    color: lightslategray;
+}
+
+.listOfComments {
+    margin-top: 10px;
+    background-color: #f8f7f6;
+}
+
+#hidden-input {
+    padding-left: 30px;
+    width: 100%;
+    height: 5vh;
+}
+
+.textForm {
+    display: flex;
+    align-items: center;
+}
+/*COMMENT SECTION*/
